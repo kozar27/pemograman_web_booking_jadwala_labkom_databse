@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Ruangan Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+        h2 {
+            text-align: center;
+            
+            color: #4caf50;
+        }
+        h3 {
+            text-align: center;
+            
+            color: #000000;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            background-color: #2196f3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .btn-link:hover {
+            background-color: #1976d2;
+        }
+
+        .footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="logo1.png" alt="Logo Sekolah">
+        <h1>SMK AL-HUSNA CISALAK</h1>
+    </div>
+    <h3>ISI FORMULIR DIBAWAH UNTUK MENDAFTAR PENGGUNAAN LAB. KOMPUTER</h3>
+    <!-- Form Container -->
+    <div class="container">
+        <h2>PENDAFTARAN</h2>
+        
+        <form action="submit.php" method="post">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tanggal">Tanggal</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+
+            <label for="waktu">Waktu</label>
+            <input type="time" id="waktu" name="waktu" required>
+
+            <label for="keperluan">Keperluan</label>
+            <input type="text" id="keperluan" name="keperluan" required>
+
+            <label for="kelas">Kelas</label>
+            <select id="kelas" name="kelas" required>
+                <option value="" disabled selected>Pilih Kelas</option>
+                <option value="X-RPL1">X-RPL1</option>
+                <option value="X-RPL2">X-RPL2</option>
+                <option value="XI-RPL1">XI-RPL1</option>
+                <option value="XI-RPL2">XI-RPL2</option>
+                <option value="XII-RPL1">XII-RPL1</option>
+                <option value="XII-RPL2">XII-RPL2</option>
+            </select>
+
+            <button type="submit">Daftar</button>
+        </form>
+
+        <div class="link-container">
+            <a href="submit.php" class="btn-link">Lihat Data yang Sudah Terdaftar</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 khoerul </p>
+        <p>E-Mail: khoerullazhar27@gmail.com</p>
+    </div>
+</body>
+</html>
